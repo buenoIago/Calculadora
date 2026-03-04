@@ -1,0 +1,15 @@
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\bin\Debug\net10.0\CalculadoraConsoleApp.exe
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.AssemblyInfo.cs
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.sourcelink.json
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.dll
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\refint\CalculadoraConsoleApp.dll
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.pdb
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\bin\Debug\net10.0\CalculadoraConsoleApp.deps.json
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\bin\Debug\net10.0\CalculadoraConsoleApp.runtimeconfig.json
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\bin\Debug\net10.0\CalculadoraConsoleApp.dll
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\bin\Debug\net10.0\CalculadoraConsoleApp.pdb
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\CalculadoraConsoleApp.genruntimeconfig.cache
+C:\Users\Cliente\Desktop\AcademiaProgramador\Calculadora\CalculadoraConsoleApp\obj\Debug\net10.0\ref\CalculadoraConsoleApp.dll
