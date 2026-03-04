@@ -52,10 +52,6 @@ while (deveContinuar == true)
     {
         resultado = primeiroNumero * segundoNumero;
     }
-    else if (operacaoSelecionada == "4")
-    {
-        resultado = primeiroNumero / segundoNumero;
-    }
     else
     {
         if (segundoNumero == 0)
