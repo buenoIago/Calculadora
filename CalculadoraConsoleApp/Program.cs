@@ -3,6 +3,8 @@ bool deveContinuar = true;
 
 while (deveContinuar == true)
 {
+    Console.Clear();
+    
     Console.WriteLine("----------------------------");
     Console.WriteLine("Calculadora, 2026!");
     Console.WriteLine("----------------------------");
@@ -12,10 +14,10 @@ while (deveContinuar == true)
     Console.WriteLine("Selecione a operação desejada: ");
     string operacaoSelecionada = Console.ReadLine();
 
-    if (operacaoSelecionada == "s")
+    if (operacaoSelecionada == "s" || operacaoSelecionada == "S")
     {
         deveContinuar = false;
-
+        Console.WriteLine("Encerrando o programa. Até mais...");
         continue;
     }
 
