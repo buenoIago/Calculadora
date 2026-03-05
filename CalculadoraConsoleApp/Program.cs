@@ -13,7 +13,16 @@ while (deveContinuar == true)
 
     Console.WriteLine("Selecione a operação desejada: ");
     string operacaoSelecionada = Console.ReadLine();
+    
+    bool operacaoSelecionadaVazio = string.IsNullOrEmpty(operacaoSelecionada);
 
+    if (operacaoSelecionadaVazio == true)
+    {
+        Console.WriteLine("Informe uma opção válida.");
+        Console.ReadLine();
+
+        continue;
+    }
     if (operacaoSelecionada == "s" || operacaoSelecionada == "S")
     {
         deveContinuar = false;
@@ -34,11 +43,33 @@ while (deveContinuar == true)
 
     Console.WriteLine();
 
-    // int = numero inteiro
-    int primeiroNumero = Convert.ToInt32(strPrimeiroNumero);
-    int segundoNumero = Convert.ToInt32(strSegundoNumero);
+    bool primeiroNumeroVazio = string.IsNullOrEmpty(strPrimeiroNumero);
+    bool segundoNumeroVazio = string.IsNullOrEmpty(strSegundoNumero);
 
-    int resultado;
+    if (primeiroNumeroVazio == true || segundoNumeroVazio == true)
+    {
+        Console.WriteLine("Digite um número válido");
+        Console.ReadLine();
+
+        continue;
+    }   
+
+    // if acima verifica se o número digitado é nulo
+    //if(strPrimeiroNumero == "" || strSegundoNumero == "")
+    //{
+       // Console.WriteLine("Digite um número válido. ");
+        //Console.ReadLine();
+
+        //continue;
+    //}
+
+    decimal numeroDecimal = 1.1234567m;
+
+    // int = numero inteiro
+    decimal primeiroNumero = Convert.ToDecimal(strPrimeiroNumero);
+    decimal segundoNumero = Convert.ToDecimal(strSegundoNumero);
+    
+    decimal resultado;
 
     if (operacaoSelecionada == "1")
     {
@@ -57,7 +88,8 @@ while (deveContinuar == true)
         if (segundoNumero == 0)
         {
             Console.WriteLine("Não é possível dividir por zero!");
-            return;
+            Console.ReadLine();
+            continue;
         }
         resultado = primeiroNumero / segundoNumero;
     }
