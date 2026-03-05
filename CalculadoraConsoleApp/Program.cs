@@ -9,7 +9,7 @@ while (deveContinuar == true)
     Console.WriteLine("Calculadora, 2026!");
     Console.WriteLine("----------------------------");
 
-    Console.WriteLine("1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\nS - Sair");
+    Console.WriteLine("1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Tabuada\nH - Ver Histórico\nS - Sair");
 
     Console.WriteLine("Selecione a operação desejada: ");
     string operacaoSelecionada = Console.ReadLine();
@@ -30,6 +30,25 @@ while (deveContinuar == true)
         continue;
     }
 
+    // Lógica da Tabuada
+    if (operacaoSelecionada == "5")
+    {
+        Console.WriteLine("Digite o número que deseja gerar a tabuada: ");
+
+        int numeroTabuada = Convert.ToInt32(Console.ReadLine());
+        
+        for (int contador = 1; contador <=10; contador++)
+        {
+            int resultadoTabuada = numeroTabuada * contador;
+            string operacaoTabuada = numeroTabuada + " x " + contador + " = " + resultadoTabuada;
+
+            Console.WriteLine(operacaoTabuada);
+        }
+        Console.ReadLine();
+        continue;
+    }
+
+    // Lógica cálculo
     Console.WriteLine("Digite o primeiro número: ");
     string strPrimeiroNumero = Console.ReadLine();
 
