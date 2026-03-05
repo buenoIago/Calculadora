@@ -3,6 +3,8 @@ bool deveContinuar = true;
 
 while (deveContinuar == true)
 {
+    Console.Clear();
+
     Console.WriteLine("----------------------------");
     Console.WriteLine("Calculadora, 2026!");
     Console.WriteLine("----------------------------");
@@ -49,10 +51,6 @@ while (deveContinuar == true)
     else if (operacaoSelecionada == "3")
     {
         resultado = primeiroNumero * segundoNumero;
-    }
-    else if (operacaoSelecionada == "4")
-    {
-        resultado = primeiroNumero / segundoNumero;
     }
     else
     {
