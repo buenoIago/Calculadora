@@ -18,7 +18,7 @@ while (deveContinuar == true)
 
     if (operacaoSelecionadaVazio == true)
     {
-        Console.WriteLine("Informe uma opção válida.");
+        Console.WriteLine("Informe uma opção válida!");
         Console.ReadLine();
 
         continue;
@@ -33,7 +33,7 @@ while (deveContinuar == true)
     Console.WriteLine("Digite o primeiro número: ");
     string strPrimeiroNumero = Console.ReadLine();
 
-    Console.Write("Digite o segundo número: ");
+    Console.Write("Digite o segundo número: \n");
     string strSegundoNumero = Console.ReadLine();
 
     Console.WriteLine();
@@ -48,7 +48,7 @@ while (deveContinuar == true)
 
     if (primeiroNumeroVazio == true || segundoNumeroVazio == true)
     {
-        Console.WriteLine("Digite um número válido");
+        Console.WriteLine("Digite um número válido!");
         Console.ReadLine();
 
         continue;
@@ -70,29 +70,32 @@ while (deveContinuar == true)
     decimal segundoNumero = Convert.ToDecimal(strSegundoNumero);
     
     decimal resultado;
-
-    if (operacaoSelecionada == "1")
+    switch (operacaoSelecionada) 
     {
-        resultado = primeiroNumero + segundoNumero;
-    }
-    else if (operacaoSelecionada == "2")
-    {
-        resultado = primeiroNumero - segundoNumero;
-    }
-    else if (operacaoSelecionada == "3")
-    {
-        resultado = primeiroNumero * segundoNumero;
-    }
-    else
-    {
+        case "1":
+            resultado = primeiroNumero + segundoNumero;
+            break;
+        case "2":
+            resultado = primeiroNumero - segundoNumero;
+            break;
+        case "3":
+            resultado = primeiroNumero * segundoNumero;
+            break;
+        case "4":
         if (segundoNumero == 0)
         {
             Console.WriteLine("Não é possível dividir por zero!");
             Console.ReadLine();
             continue;
         }
-        resultado = primeiroNumero / segundoNumero;
+            resultado = primeiroNumero / segundoNumero;
+            break;
+        default:
+           Console.WriteLine("Selecione uma operação válida!");
+            
+            continue;
     }
+
     Console.WriteLine("O resultado da operação é: " + resultado);
 
     Console.ReadLine();
