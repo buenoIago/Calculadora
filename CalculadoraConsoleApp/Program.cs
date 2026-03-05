@@ -1,9 +1,9 @@
-﻿
-bool deveContinuar = true;
+﻿bool deveContinuar = true;
+string historico = "";
 
 while (deveContinuar == true)
 {
-    Console.Clear();
+    
 
     Console.WriteLine("----------------------------");
     Console.WriteLine("Calculadora, 2026!");
@@ -30,17 +30,23 @@ while (deveContinuar == true)
         continue;
     }
 
-    // Lógica da Tabuada
+    if (operacaoSelecionada == "h" || operacaoSelecionada == "h")
+    {
+        Console.WriteLine("Histórico de operações: ");
+        Console.WriteLine(historico);
+        Console.ReadLine();
+        continue;
+    }
+
     if (operacaoSelecionada == "5")
     {
         Console.WriteLine("Digite o número que deseja gerar a tabuada: ");
-
         int numeroTabuada = Convert.ToInt32(Console.ReadLine());
         
         for (int contador = 1; contador <=10; contador++)
         {
             int resultadoTabuada = numeroTabuada * contador;
-            string operacaoTabuada = numeroTabuada + " x " + contador + " = " + resultadoTabuada;
+            string operacaoTabuada = ($"{numeroTabuada} x {contador} = {resultadoTabuada}");
 
             Console.WriteLine(operacaoTabuada);
         }
@@ -48,7 +54,6 @@ while (deveContinuar == true)
         continue;
     }
 
-    // Lógica cálculo
     Console.WriteLine("Digite o primeiro número: ");
     string strPrimeiroNumero = Console.ReadLine();
 
@@ -57,8 +62,8 @@ while (deveContinuar == true)
 
     Console.WriteLine();
 
-    Console.WriteLine("O primeiro número digitado foi: " + strPrimeiroNumero);
-    Console.WriteLine("O segundo número digitado foi: " + strSegundoNumero);
+    Console.WriteLine($"O primeiro número digitado foi: {strPrimeiroNumero}");
+    Console.WriteLine($"O segundo número digitado foi: {strSegundoNumero}");
 
     Console.WriteLine();
 
@@ -73,32 +78,24 @@ while (deveContinuar == true)
         continue;
     }   
 
-    // if acima verifica se o número digitado é nulo
-    //if(strPrimeiroNumero == "" || strSegundoNumero == "")
-    //{
-       // Console.WriteLine("Digite um número válido. ");
-        //Console.ReadLine();
-
-        //continue;
-    //}
-
-    decimal numeroDecimal = 1.1234567m;
-
-    // int = numero inteiro
     decimal primeiroNumero = Convert.ToDecimal(strPrimeiroNumero);
     decimal segundoNumero = Convert.ToDecimal(strSegundoNumero);
     
     decimal resultado;
+    string simbolo = "";
     switch (operacaoSelecionada) 
     {
         case "1":
             resultado = primeiroNumero + segundoNumero;
+            simbolo = "+";
             break;
         case "2":
             resultado = primeiroNumero - segundoNumero;
+            simbolo = "-";
             break;
         case "3":
             resultado = primeiroNumero * segundoNumero;
+            simbolo = "*";
             break;
         case "4":
         if (segundoNumero == 0)
@@ -108,14 +105,19 @@ while (deveContinuar == true)
             continue;
         }
             resultado = primeiroNumero / segundoNumero;
+            simbolo = "/";
             break;
-        default:
+            default:
            Console.WriteLine("Selecione uma operação válida!");
             
             continue;
     }
 
-    Console.WriteLine("O resultado da operação é: " + resultado);
+    string operacao = ($"{primeiroNumero} {simbolo} {segundoNumero} = {resultado}");
+
+    historico += operacao + "\n";
+
+    Console.WriteLine($"O resultado da operação é: {resultado}");
 
     Console.ReadLine();
 }
