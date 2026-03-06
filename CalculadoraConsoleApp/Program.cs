@@ -27,7 +27,7 @@ while (true)
         Console.WriteLine("Encerrando o programa. Até mais...");
         Thread.Sleep(2000);
         return;
-    }
+    }   
 
     if (operacaoSelecionada == "5")
     {
@@ -38,7 +38,6 @@ while (true)
         {
             int resultadoTabuada = numeroTabuada * contador;           
             string operacaoTabuada = ($"{numeroTabuada} x {contador} = {resultadoTabuada}");
-
             Console.WriteLine(operacaoTabuada);
         }
         Console.ReadLine();
@@ -88,7 +87,7 @@ while (true)
     
     decimal resultado;
     string textoOperacao;
-
+    
     switch (operacaoSelecionada) 
     {
         case "1":
@@ -117,8 +116,7 @@ while (true)
             default:      
             Console.WriteLine("Selecione uma operação válida!");
             
-            continue;
-         
+            continue;        
     }
     
     if(contadorOperacao < historico.Length)
@@ -126,8 +124,7 @@ while (true)
     historico[contadorOperacao] = textoOperacao;
     contadorOperacao++;
     }
-    
-    
+     
     Console.WriteLine($"O resultado da operação é: {resultado}");
 
     Console.ReadLine();
