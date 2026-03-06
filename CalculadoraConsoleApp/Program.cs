@@ -77,7 +77,7 @@ while (true)
     if (primeiroNumeroVazio == true || segundoNumeroVazio == true)
     {
         Console.WriteLine("Digite um número válido!");
-        Console.ReadLine();
+        Thread.Sleep(2000);
 
         continue;
     }   
@@ -87,7 +87,7 @@ while (true)
     
     decimal resultado;
     string textoOperacao;
-    
+
     switch (operacaoSelecionada) 
     {
         case "1":
@@ -106,7 +106,7 @@ while (true)
         if (segundoNumero == 0)
         {
             Console.WriteLine("Não é possível dividir por zero!");
-            Console.ReadLine();
+            Thread.Sleep(2000);
             continue;
         }
             resultado = primeiroNumero / segundoNumero;
@@ -115,7 +115,7 @@ while (true)
 
             default:      
             Console.WriteLine("Selecione uma operação válida!");
-            
+            Thread.Sleep(2000);
             continue;        
     }
     
