@@ -1,6 +1,6 @@
 # CALCULADORA 2026
 
-![]()
+![alt text](WindowsTerminal_zCK8RfTcrc.gif)
 
 ## Introdução
 
