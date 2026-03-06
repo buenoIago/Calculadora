@@ -1,9 +1,8 @@
-﻿bool deveContinuar = true;
-string historico = "";
+﻿string[] historico = new string[100];
+int contadorOperacao = 0;
 
-while (deveContinuar == true)
+while (true)
 {
-    
 
     Console.WriteLine("----------------------------");
     Console.WriteLine("Calculadora, 2026!");
@@ -20,22 +19,14 @@ while (deveContinuar == true)
     {
         Console.WriteLine("Informe uma opção válida!");
         Console.ReadLine();
-
         continue;
     }
+
     if (operacaoSelecionada == "s" || operacaoSelecionada == "S")
     {
-        deveContinuar = false;
         Console.WriteLine("Encerrando o programa. Até mais...");
-        continue;
-    }
-
-    if (operacaoSelecionada == "h" || operacaoSelecionada == "h")
-    {
-        Console.WriteLine("Histórico de operações: ");
-        Console.WriteLine(historico);
-        Console.ReadLine();
-        continue;
+        Thread.Sleep(2000);
+        return;
     }
 
     if (operacaoSelecionada == "5")
@@ -45,13 +36,27 @@ while (deveContinuar == true)
         
         for (int contador = 1; contador <=10; contador++)
         {
-            int resultadoTabuada = numeroTabuada * contador;
+            int resultadoTabuada = numeroTabuada * contador;           
             string operacaoTabuada = ($"{numeroTabuada} x {contador} = {resultadoTabuada}");
 
             Console.WriteLine(operacaoTabuada);
         }
         Console.ReadLine();
         continue;
+    }
+
+    else if (operacaoSelecionada == "h" || operacaoSelecionada == "H")
+    {
+    Console.WriteLine("Histórico de operações: ");
+
+    
+       for (int i = 0; i < 10; i++)
+       {
+       Console.WriteLine(historico[i]);
+       }
+
+    Console.ReadLine();
+    continue;
     }
 
     Console.WriteLine("Digite o primeiro número: ");
@@ -82,20 +87,21 @@ while (deveContinuar == true)
     decimal segundoNumero = Convert.ToDecimal(strSegundoNumero);
     
     decimal resultado;
-    string simbolo = "";
+    string textoOperacao;
+
     switch (operacaoSelecionada) 
     {
         case "1":
             resultado = primeiroNumero + segundoNumero;
-            simbolo = "+";
+            textoOperacao = $"{primeiroNumero} + {segundoNumero} = {resultado}";
             break;
         case "2":
             resultado = primeiroNumero - segundoNumero;
-            simbolo = "-";
+            textoOperacao = $"{primeiroNumero} - {segundoNumero} = {resultado}";
             break;
         case "3":
             resultado = primeiroNumero * segundoNumero;
-            simbolo = "*";
+            textoOperacao = $"{primeiroNumero} * {segundoNumero} = {resultado}";
             break;
         case "4":
         if (segundoNumero == 0)
@@ -105,18 +111,23 @@ while (deveContinuar == true)
             continue;
         }
             resultado = primeiroNumero / segundoNumero;
-            simbolo = "/";
+            textoOperacao = $"{primeiroNumero} / {segundoNumero} = {resultado}";
             break;
-            default:
-           Console.WriteLine("Selecione uma operação válida!");
+
+            default:      
+            Console.WriteLine("Selecione uma operação válida!");
             
             continue;
+         
     }
-
-    string operacao = ($"{primeiroNumero} {simbolo} {segundoNumero} = {resultado}");
-
-    historico += operacao + "\n";
-
+    
+    if(contadorOperacao < historico.Length)
+    {     
+    historico[contadorOperacao] = textoOperacao;
+    contadorOperacao++;
+    }
+    
+    
     Console.WriteLine($"O resultado da operação é: {resultado}");
 
     Console.ReadLine();
