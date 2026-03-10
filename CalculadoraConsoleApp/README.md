@@ -26,7 +26,7 @@ Uma calculadora simples mas que permite realizar as quatro operações matemáti
 4. Em seguida compile e execute o projeto com o comando: 
 
     ```
-    dotnet ru --project CalculadoraConsoleApp
+    dotnet run --project CalculadoraConsoleApp
     ```
 
 ## Requistitos
